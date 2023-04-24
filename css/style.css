@@ -1,0 +1,158 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: #E5E7EB;
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-feature-settings: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* Utilities */
+.container {
+    max-width: 1224px;
+    margin: 0 auto;
+}
+
+/* #region HEADER */
+
+header {
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #3a3a3a;
+    color: white;
+    /* text-align: center; */
+}
+
+header>.container>div>p {
+    font-weight: 700;
+}
+
+.nav>ul>li>a {
+    color: white;
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+.nav>ul {
+    display: flex;
+    margin-right: 3rem;
+    gap: 0.8rem;
+}
+
+.nav>ul>li {
+    font-weight: 500;
+}
+
+/* #endregion HEADER */
+
+/* #region Main */
+
+.title {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+/* Button Action - Get Data from API */
+.actionsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.actionItem {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.7rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-act {
+    margin: 0 auto;
+    background-color: #04dda7;
+    height: 50px;
+    color: white;
+    /* padding: .5rem 1.5rem; */
+    width: 7rem;
+    padding: .7rem 0;
+    border-radius: .2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    box-shadow: -2px -2px 5px #3a3a3a;
+    cursor: pointer;
+}
+
+.btn-act:hover {
+    background-color: #2eebbb;
+    scale: 1.1;
+}
+
+
+.label {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem
+}
+
+.response {
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.listWorks {
+    /* display: flex;
+    flex-direction: column; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 0.5rem;
+}
+
+.listWorks a {
+    color: #3a3a3a;
+}
+
+.listWorks a:hover {
+    color: #a1a1a1;
+}
+
+/* #endregion Main */

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div>
+                <!-- <p>API</p> -->
+            </div>
+        </div>
+        <div class="nav">
+            <ul>
+                <li>
+                    <!-- <a href="#">Home</a> -->
+                </li>
+                <li>
+                    <a href="#">Data</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="container">
+        <h1 class="title">API Test</h1>
+
+        <!-- Get all URL from the different WORKS -->
+        <div class="actionsContainer">
+            <div class="actionItem">
+                <div class="actions">
+                    <button onclick="getUrlWorks()" class="btn-act">Get Works</button>
+                </div>
+                <ul class="response listWorks" id="works"></ul>
+            </div>
+
+            <!-- Get the the DOI from specific Work -->
+            <div class="actionItem">
+                <div class="actions">
+                    <button onclick="getDoi()" class="btn-act">Get DOI</button>
+                </div>
+                <!-- <p for="doi" class="label">Response:</p> -->
+                <p class="response" id="doi"></p>
+            </div>
+
+            <div class="actionItem">
+                <div>
+                    <button onclick="" class="btn-act">-</button>
+                </div>
+                <!-- <p for="doi" class="label">Response:</p> -->
+                <p class="response" id="doi"></p>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="js/api.js"></script>
+    <!-- <script src="js/data.js"></script> -->
+</body>
+
+</html>
