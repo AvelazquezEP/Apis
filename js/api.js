@@ -8,7 +8,7 @@ async function postData(url = '') {
     let data = await fetch(url);
     var json = await data.json();
 
-    return json.message;
+    return json;
 };
 
 /**
@@ -28,8 +28,11 @@ const changeValueElement = (element, data) => {
  * en cada uno de estos links se encuentra toda la información de cada uno de los trabajos que estén registrados 
  */
 const getUrlWorks = () => {
-    postData('https://api.crossref.org/works')
-        .then(data => addLi(data.items));
+    // postData('https://api.crossref.org/works')
+    //     .then(data => addLi(data.items));
+
+    postData('http://127.0.0.1:8000/api/blogs')
+        .then(data => addLi(data.Data));
 }
 
 /**
@@ -44,11 +47,14 @@ const addLi = (work) => {
     var linkLabel;
     const max = work.length;
 
+    console.log(work);
+
     for (i = 0; i < max; i++) {
         var li = document.createElement("li");
         var a = document.createElement("a");
-        linkLabel = `${[i]} - Link`;
-        link = `${work[i].URL}`;
+        // linkLabel = `${[i]} - Link`;
+        linkLabel = `Item #${[i]} - ID: ${work[i].id}`;
+        link = `${work[i].id}`;
         a.appendChild(document.createTextNode(linkLabel))
         a.href = link;
         document.querySelector("#works").appendChild(li).appendChild(a);
@@ -61,6 +67,10 @@ const addLi = (work) => {
  * Se usa en un evento OnClick esto permite obtener el DOI de un libro, revista, publicación científica  
  */
 function getDoi() {
-    postData('https://api.crossref.org/works/10.1037/0003-066X.59.1.29/agency')
-        .then(data => changeValueElement("doi", data.DOI));
+    // postData('https://api.crossref.org/works/10.1037/0003-066X.59.1.29/agency')
+    //     .then(data => changeValueElement("doi", data.DOI));
+
+    postData('http://127.0.0.1:8000/api/blog/5')
+        .then(data => changeValueElement("doi", data.Post.title));
+    // .then(data => console.log(data.Post.title));
 }
