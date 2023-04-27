@@ -32,8 +32,6 @@
 
     <main class="container">
         <h1 class="title">API Test</h1>
-
-        <!-- Get all URL from the different WORKS -->
         <div class="actionsContainer">
             <div class="actionItem">
                 <div class="actions">
@@ -42,22 +40,23 @@
                 <ul class="response listWorks" id="works"></ul>
             </div>
 
-            <!-- Get the the DOI from specific Work -->
-            <div class="actionItem">
+            <hr style="width: 80%; height: 1px; background-color: black;">
+            <div class="actionItem doubleElement">
+                <input type="number" class="inputBlogPost" name="idPost" id="idPostGet" placeholder="ID:">
                 <div class="actions">
-                    <button onclick="getDoi()" class="btn-act">Get DOI</button>
+                    <button onclick="getDoi()" name="getDoi" class="btn-act">Get By ID</button>
                 </div>
-                <!-- <p for="doi" class="label">Response:</p> -->
-                <p class="response" id="doi"></p>
             </div>
+            <p class="response" id="doi"></p>
 
-            <div class="actionItem">
-                <div>
-                    <button onclick="" class="btn-act">-</button>
+            <hr style="width: 80%; height: 1px; background-color: black;">
+            <div class="actionItem doubleElement">
+                <input type="number" class="inputBlogPost" name="idPostDelete" id="idPostDelete" placeholder="ID:">
+                <div class="actions">
+                    <button onclick="deletePost()" name="deletePost" class="btn-act">Delete By ID</button>
                 </div>
-                <!-- <p for="doi" class="label">Response:</p> -->
-                <p class="response" id="doi"></p>
             </div>
+            <p class="response" id="postDeleted"></p>
 
         </div>
     </main>

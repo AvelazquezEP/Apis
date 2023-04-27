@@ -105,6 +105,25 @@ header>.container>div>p {
     align-items: center;
 }
 
+.doubleElement {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-around;
+    /* margin-left: 5rem; */
+}
+
+.inputBlogPost {
+    border: 1px solid #3a3a3a;
+    padding: 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.inputBlogPost:focus,
+.inputBlogPost:hover {
+    scale: 1.1;
+}
+
 .btn-act {
     margin: 0 auto;
     background-color: #04dda7;
